@@ -1,0 +1,38 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date              : Fri Mar 20 19:44:01 2020
+| Host              : nechi running 64-bit Ubuntu 18.04.4 LTS
+| Command           : report_clock_interaction -file reports/ariane.clock_interaction.rpt
+| Design            : ariane_xilinx
+| Device            : xcvu9p-flga2104
+| Speed File        : -2L  PRODUCTION 1.26 08-13-2019
+| Temperature Grade : E
+------------------------------------------------------------------------------------------
+
+Clock Interaction Report
+
+Clock Interaction Table
+-----------------------
+
+                                                          WNS                            TNS Failing  TNS Total    WNS Path         Clock-Pair           Inter-Clock                  
+From Clock                   To Clock                     Clock Edges  WNS(ns)  TNS(ns)    Endpoints    Endpoints  Requirement(ns)  Classification       Constraints                  
+---------------------------  ---------------------------  -----------  -------  -------  -----------  -----------  ---------------  -------------------  ---------------------------  
+SYSCLK1_300_P                SYSCLK1_300_P                rise - rise     2.99     0.00            0           23             4.00  Clean                Timed                        
+SYSCLK1_300_P                mmcm_clkout0                                                          0            1                   Ignored              False Path                   
+SYSCLK1_300_P                mmcm_clkout6                                                          0            2                   Ignored              False Path                   
+clk_out1_xlnx_clk_gen        clk_out1_xlnx_clk_gen        rise - rise    12.19     0.00            0       121173            20.00  Clean                Partial False Path           
+clk_out1_xlnx_clk_gen        mmcm_clkout0                 rise - rise    12.65     0.00            0         2161            13.33  No Common Clock      Partial False Path (unsafe)  
+clk_out1_xlnx_clk_gen        tck                          rise - rise    19.72     0.00            0           36            20.00  Ignored              Max Delay Datapath Only      
+mmcm_clkout0                 clk_out1_xlnx_clk_gen        rise - rise     2.65     0.00            0          971             3.33  No Common Clock      Partial False Path (unsafe)  
+mmcm_clkout0                 mmcm_clkout0                 rise - rise     0.30     0.00            0        46737             3.33  Clean                Timed                        
+mmcm_clkout0                 mmcm_clkout6                 rise - rise     2.73     0.00            0           36             3.33  Clean                Timed                        
+mmcm_clkout0                 pll_clk[0]_DIV               rise - rise     1.55     0.00            0          384             3.33  Clean                Timed                        
+mmcm_clkout0                 pll_clk[1]_DIV               rise - rise     1.55     0.00            0          352             3.33  Clean                Timed                        
+mmcm_clkout0                 pll_clk[2]_DIV               rise - rise     1.55     0.00            0          176             3.33  Clean                Timed                        
+mmcm_clkout6                 mmcm_clkout0                 rise - rise     2.67     0.00            0          125             3.00  Ignored              Max Delay Datapath Only      
+mmcm_clkout6                 mmcm_clkout6                 rise - rise     4.15     0.00            0         7040             6.67  Clean                Partial False Path           
+tck                          clk_out1_xlnx_clk_gen        rise - rise    19.03     0.00            0           43            20.00  No Common Clock      Timed (unsafe)               
+tck                          tck                          fall - rise    38.66     0.00            0          454            50.00  Clean                Timed                        
+
+

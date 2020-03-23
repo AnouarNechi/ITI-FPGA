@@ -60,6 +60,10 @@ else ifeq ($(BOARD), vcu108)
 	XILINX_PART              := xcvu095-ffva2104-2-e
 	XILINX_BOARD             := xilinx.com:vcu108:part0:1.6
 	CLK_PERIOD_NS            := 20
+else ifeq ($(BOARD), vcu118)
+	XILINX_PART              := xcvu9p-flga2104-2L-e
+	XILINX_BOARD             := xilinx.com:vcu118:part0:2.3
+	CLK_PERIOD_NS            := 20
 else
 $(error Unknown board - please specify a supported FPGA board)
 endif

@@ -24,6 +24,8 @@ if {$::env(BOARD) eq "genesys2"} {
       add_files -fileset constrs_1 -norecurse constraints/vc707.xdc
 } elseif {$::env(BOARD) eq "vcu108"} {
       add_files -fileset constrs_1 -norecurse constraints/vcu108.xdc
+} elseif {$::env(BOARD) eq "vcu118"} {
+      add_files -fileset constrs_1 -norecurse constraints/vcu118.xdc
 } else {
       exit 1
 }
@@ -59,6 +61,10 @@ if {$::env(BOARD) eq "genesys2"} {
 } elseif {$::env(BOARD) eq "vc707"} {
       read_verilog -sv {src/vcu108.svh ../src/common_cells/include/common_cells/registers.svh}
       set file "src/vcu108.svh"
+      set registers "../src/common_cells/include/common_cells/registers.svh"
+} elseif {$::env(BOARD) eq "vcu118"} {
+      read_verilog -sv {src/vcu118.svh ../src/common_cells/include/common_cells/registers.svh}
+      set file "src/vcu118.svh"
       set registers "../src/common_cells/include/common_cells/registers.svh"
 } else {
     exit 1

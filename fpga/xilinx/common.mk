@@ -1,4 +1,5 @@
 all:
+	vivado -stack 2000
 	vivado -mode batch -source tcl/run.tcl
 	mkdir -p ip
 	cp -r ${PROJECT}.srcs/sources_1/ip/${PROJECT}/* ip/.

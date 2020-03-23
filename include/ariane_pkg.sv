@@ -55,9 +55,9 @@ package ariane_pkg;
     } ariane_cfg_t;
 
     localparam ariane_cfg_t ArianeDefaultConfig = '{
-      RASDepth: 2,
+      RASDepth: 8,
       BTBEntries: 32,
-      BHTEntries: 128,
+      BHTEntries: 512,
       // idempotent region
       NrNonIdempotentRules: 2,
       NonIdempotentAddrBase: {64'b0, 64'b0},
@@ -401,7 +401,7 @@ package ariane_pkg;
 `endif
 
 `ifndef CONFIG_L1D_SIZE
-    `define CONFIG_L1D_SIZE 32*1024
+    `define CONFIG_L1D_SIZE 16*1024
 `endif
 
     // I$

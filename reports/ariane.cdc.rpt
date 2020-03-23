@@ -1,0 +1,31 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date              : Fri Mar 20 19:43:45 2020
+| Host              : nechi running 64-bit Ubuntu 18.04.4 LTS
+| Command           : report_cdc -file reports/ariane.cdc.rpt
+| Design            : ariane_xilinx
+| Device            : xcvu9p-flga2104
+| Speed File        : -2L  PRODUCTION 1.26 08-13-2019
+| Temperature Grade : E
+-----------------------------------------------------------------------------------------
+
+CDC Report
+
+Severity  Source Clock           Destination Clock      CDC Type                 Exceptions               Endpoints  Safe  Unsafe  Unknown  No ASYNC_REG  
+--------  ---------------------  ---------------------  -----------------------  -----------------------  ---------  ----  ------  -------  ------------  
+Critical  mmcm_clkout0           clk_out1_xlnx_clk_gen  No Common Primary Clock  None                           866   787       0       79             0  
+Critical  clk_out1_xlnx_clk_gen  mmcm_clkout0           No Common Primary Clock  None                          1867  1772       0       95             0  
+Critical  input port clock       tck                    No Common Primary Clock  False Path                     205     0       0      205             0  
+Warning   tck                    clk_out1_xlnx_clk_gen  No Common Primary Clock  None                            43    43       0        0             1  
+Warning   clk_out1_xlnx_clk_gen  tck                    No Common Primary Clock  Max Delay Datapath Only         36    36       0        0             1  
+Info      input port clock       SYSCLK1_300_P          No Common Primary Clock  False Path                       1     1       0        0             0  
+Info      input port clock       clk_out1_xlnx_clk_gen  No Common Primary Clock  False Path                       4     4       0        0             0  
+Info      SYSCLK1_300_P          mmcm_clkout0           User Ignored             False Path                       1     1       0        0             0  
+Info      mmcm_clkout6           mmcm_clkout0           Safely Timed             Max Delay Datapath Only        125   125       0        0             0  
+Info      SYSCLK1_300_P          mmcm_clkout6           User Ignored             False Path                       2     2       0        0             0  
+Info      mmcm_clkout0           mmcm_clkout6           Safely Timed             None                            36    36       0        0             0  
+Info      mmcm_clkout0           pll_clk[0]_DIV         Safely Timed             None                           384   384       0        0             0  
+Info      mmcm_clkout0           pll_clk[1]_DIV         Safely Timed             None                           352   352       0        0             0  
+Info      mmcm_clkout0           pll_clk[2]_DIV         Safely Timed             None                           176   176       0        0             0  
+
